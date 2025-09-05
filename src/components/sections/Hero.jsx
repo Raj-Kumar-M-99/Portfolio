@@ -30,10 +30,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-lg"
           >
             Hi, I'm{' '}
-            <span className="gradient-text">
+            <span className="text-white drop-shadow-lg">
               {personalInfo.name}
             </span>
           </motion.h1>
@@ -44,7 +44,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-6"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white/90 mb-2">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-2 drop-shadow-md">
               {personalInfo.role}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-white/60 to-white/40 mx-auto rounded-full"></div>
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
           >
             {personalInfo.tagline}
           </motion.p>

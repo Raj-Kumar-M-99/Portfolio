@@ -89,13 +89,13 @@ const SkillCard = ({ skill, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.1, y: -5 }}
-      className="glass-card p-4 shadow-lg hover:shadow-2xl transition-all duration-300 group"
+      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-white/30"
     >
       <div className="flex flex-col items-center text-center">
-        <div className="p-3 bg-white/20 dark:bg-white/10 rounded-lg mb-3 group-hover:bg-white/30 dark:group-hover:bg-white/20 transition-all duration-300">
+        <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg mb-3 group-hover:bg-white dark:group-hover:bg-gray-700 transition-all duration-300">
           <IconComponent className={`w-8 h-8 transition-all duration-300 ${getIconClass(skill.name)}`} />
         </div>
-        <h3 className="text-sm font-semibold text-white group-hover:text-white transition-colors duration-300">
+        <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-yellow-300 transition-colors duration-300">
           {skill.name}
         </h3>
       </div>
@@ -112,10 +112,10 @@ const SkillCategory = ({ category, skillList, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
       viewport={{ once: true }}
-      className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700"
+      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/30"
     >
       <div className="flex items-center mb-6">
-        <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-4">
+        <div className="p-3 bg-blue-100 dark:bg-blue-900/50 rounded-lg mr-4">
           <CategoryIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -134,7 +134,7 @@ const SkillCategory = ({ category, skillList, index }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section-padding bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="skills" className="section-padding transition-colors duration-300">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -143,11 +143,11 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             Skills & Technologies
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-white mx-auto rounded-full shadow-lg mb-6"></div>
+          <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-md">
             I have experience with a wide range of technologies and tools. 
             Here's my technical skill set organized by category.
           </p>
@@ -165,13 +165,13 @@ const Skills = () => {
             const CategoryIcon = categoryIcons[category] || Code;
             return (
               <div key={category} className="text-center">
-                <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-4 rounded-xl border border-blue-200 dark:border-blue-800 mb-2">
+                <div className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/30 mb-2">
                   <CategoryIcon className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">
                     {skillList.length}
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                <p className="text-sm text-gray-800 dark:text-white font-medium">
                   {category.split(' ')[0]}
                 </p>
               </div>
@@ -197,12 +197,12 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 text-center bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-8 rounded-2xl border border-blue-200 dark:border-blue-800"
+          className="mt-16 text-center bg-white/90 dark:bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/30"
         >
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Always Learning
           </h3>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-6">
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-6">
             Technology evolves rapidly, and I'm committed to continuous learning and staying 
             up-to-date with the latest trends and best practices in software development.
           </p>

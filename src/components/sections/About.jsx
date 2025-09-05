@@ -14,10 +14,10 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             About Me
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-white/60 to-white/40 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-white mx-auto rounded-full shadow-lg"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">

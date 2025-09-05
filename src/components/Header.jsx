@@ -56,7 +56,7 @@ const Header = () => {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-200 dark:border-gray-700'
+          ? 'bg-white/10 dark:bg-black/30 backdrop-blur-md shadow-lg border-b border-white/20 dark:border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -65,7 +65,7 @@ const Header = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gray-900 dark:text-white"
+            className="text-2xl font-bold text-white"
           >
             <button onClick={() => scrollToSection('#hero')} className="focus:outline-none">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
@@ -84,15 +84,15 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none ${
                   activeSection === item.href.substring(1)
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                    ? 'text-yellow-300'
+                    : 'text-white/80 hover:text-white'
                 }`}
               >
                 {item.name}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-300"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -108,7 +108,7 @@ const Header = () => {
               onClick={toggleTheme}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
               aria-label="Toggle theme"
             >
               <AnimatePresence mode="wait">
@@ -141,7 +141,7 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none"
+              className="md:hidden p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none"
               aria-label="Toggle mobile menu"
             >
               <AnimatePresence mode="wait">
@@ -179,7 +179,7 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden border-t border-gray-200 dark:border-gray-700 py-4"
+              className="md:hidden border-t border-white/20 py-4"
             >
               <div className="flex flex-col space-y-4">
                 {navigationItems.map((item, index) => (
@@ -191,8 +191,8 @@ const Header = () => {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     className={`text-left px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none ${
                       activeSection === item.href.substring(1)
-                        ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                        : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                        ? 'text-yellow-300 bg-white/10'
+                        : 'text-white/80 hover:text-white hover:bg-white/10'
                     }`}
                   >
                     {item.name}
