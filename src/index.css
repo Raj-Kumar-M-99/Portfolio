@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.dark body {
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #333;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.dark .btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+}
+
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-padding {
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 4rem 2rem;
+  }
+}
+
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Icon colors - Real brand colors */
+.icon-react { color: #61dafb !important; }
+.icon-js { color: #f7df1e !important; }
+.icon-ts { color: #3178c6 !important; }
+.icon-python { color: #3776ab !important; }
+.icon-node { color: #339933 !important; }
+.icon-mongodb { color: #47a248 !important; }
+.icon-github { color: #333 !important; }
+.dark .icon-github { color: #fff !important; }
+.icon-aws { color: #ff9900 !important; }
+.icon-docker { color: #2496ed !important; }
+.icon-git { color: #f05032 !important; }
+.icon-html { color: #e34f26 !important; }
+.icon-css { color: #1572b6 !important; }
+.icon-vue { color: #4fc08d !important; }
+.icon-angular { color: #dd0031 !important; }
+.icon-bootstrap { color: #7952b3 !important; }
+.icon-tailwind { color: #06b6d4 !important; }
+.icon-sass { color: #cc6699 !important; }
+.icon-mysql { color: #4479a1 !important; }
+.icon-postgres { color: #336791 !important; }
+.icon-redis { color: #dc382d !important; }
+.icon-nginx { color: #269539 !important; }
+.icon-linux { color: #fcc624 !important; }
+.icon-vscode { color: #007acc !important; }
+.icon-figma { color: #f24e1e !important; }
+.icon-flask { color: #000 !important; }
+.dark .icon-flask { color: #fff !important; }
+.icon-django { color: #092e20 !important; }
+.dark .icon-django { color: #44b78b !important; }
+.icon-express { color: #000 !important; }
+.dark .icon-express { color: #fff !important; }
+.icon-jquery { color: #0769ad !important; }
+.icon-postman { color: #ff6c37 !important; }
+.icon-bitbucket { color: #0052cc !important; }
+.icon-dotnet { color: #512bd4 !important; }
