@@ -57,7 +57,7 @@ const About = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 {personalInfo.name}
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-lg text-white dark:text-gray-400 leading-relaxed">
                 {personalInfo.bio}
               </p>
             </div>

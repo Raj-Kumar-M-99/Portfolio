@@ -15,8 +15,9 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full filter blur-3xl opacity-50 animate-bounce-slow"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full filter blur-3xl opacity-50 animate-bounce-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 via-accent-500/10 to-transparent animate-bg-pan" style={{ backgroundSize: '200% 200%' }}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full filter blur-3xl opacity-40 animate-bounce-slow"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full filter blur-3xl opacity-40 animate-bounce-slow" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="container-custom section-padding text-center relative z-10">
@@ -30,12 +31,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-lg"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight drop-shadow-lg"
           >
-            Hi, I'm{' '}
-            <span className="text-white drop-shadow-lg">
-              {personalInfo.name}
-            </span>
+            <span className="block text-white/90">Hi, I'm</span>
+            <span className="gradient-text drop-shadow-lg">{personalInfo.name}</span>
           </motion.h1>
 
           <motion.div
@@ -54,7 +53,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
+            className="text-xl md:text-2xl text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
           >
             {personalInfo.tagline}
           </motion.p>
@@ -67,13 +66,13 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="btn-primary text-lg px-8 py-3 inline-flex items-center justify-center"
+              className="btn-primary text-lg px-8 py-3 inline-flex items-center justify-center hover:shadow-glass hover:-translate-y-0.5 duration-200"
             >
               Get In Touch
             </a>
             <a
               href="#projects"
-              className="btn-secondary text-lg px-8 py-3 inline-flex items-center justify-center"
+              className="btn-secondary text-lg px-8 py-3 inline-flex items-center justify-center hover:shadow-soft hover:-translate-y-0.5 duration-200"
             >
               View My Work
             </a>

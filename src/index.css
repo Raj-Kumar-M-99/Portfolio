@@ -9,6 +9,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 200% 200%;
   min-height: 100vh;
   transition: background 0.3s ease;
 }
@@ -126,6 +127,26 @@ body {
   background-clip: text;
 }
 
+/* Subtle background grid overlay utility */
+.bg-grid-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.12) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+/* Card hover lift */
+.hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
 /* Icon colors - Real brand colors */
 .icon-react { color: #61dafb !important; }
 .icon-js { color: #f7df1e !important; }
@@ -162,7 +183,9 @@ body {
 .icon-postman { color: #ff6c37 !important; }
 .icon-bitbucket { color: #0052cc !important; }
 .icon-dotnet { color: #512bd4 !important; }
-
+.icon-vs { color: #512bd4 !important; }
+.icon-redux { color: #764ba2 !important; }
+.icon-next { color: #000 !important; }
 /* Text shadows for better visibility */
 .drop-shadow-text {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);

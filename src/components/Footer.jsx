@@ -11,9 +11,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 dark:bg-black text-white relative overflow-hidden">
+    <footer className="bg-gray-900/90 dark:bg-black/70 backdrop-blur-md text-white relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-brand-900/20 to-transparent"></div>
       
       <div className="container-custom section-padding relative z-10">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
@@ -26,7 +26,7 @@ const Footer = () => {
             className="md:col-span-2"
           >
             <h3 className="text-2xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent-400">
                 {personalInfo.name}
               </span>
             </h3>
@@ -89,7 +89,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
           <div className="text-center md:text-left">
             <p className="text-gray-400 text-sm flex items-center justify-center md:justify-start">
@@ -113,7 +113,7 @@ const Footer = () => {
             onClick={scrollToTop}
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            className="p-3 bg-brand-600 hover:bg-brand-700 text-white rounded-full shadow-soft transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-gray-900"
             aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5" />
@@ -126,15 +126,15 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-8 pt-6 border-t border-gray-800 text-center"
+          className="mt-8 pt-6 border-t border-white/10 text-center"
         >
           <div className="flex flex-wrap justify-center space-x-6 text-sm">
-            {['About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
+            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 whileHover={{ scale: 1.05 }}
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-200 mb-2"
+                className="text-gray-400 hover:text-brand-400 transition-colors duration-200 mb-2"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });

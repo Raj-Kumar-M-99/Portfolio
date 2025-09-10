@@ -52,7 +52,7 @@ export const skills = {
     { name: "Docker", icon: "SiDocker" },
   ],
   "Other Skills": [
-    { name: "Data Structures", icon: "SiAlgorithm" },
+    { name: "Data Structures", icon: "SiDataStructures" },
     { name: "Algorithms", icon: "SiAlgorithm" },
     { name: "Entity Framework Core", icon: "SiDotnet" },
   ],
@@ -105,3 +105,56 @@ export const softSkills = [
   "Leadership",
   "Adaptability"
 ];
+
+export const experiences = [
+  {
+    id: 1,
+    company: "Tech Solutions Inc.",
+    position: "Senior Software Developer",
+    duration: "2022 - Present",
+    location: "Remote",
+    description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices for code quality and performance.",
+    achievements: [
+      "Improved application performance by 40% through code optimization",
+      "Led a team of 5 developers on a major e-commerce platform",
+      "Implemented CI/CD pipelines reducing deployment time by 60%",
+      "Mentored 3 junior developers, helping them advance their careers"
+    ],
+    technologies: ["React", "Node.js", "TypeScript", "AWS", "Docker", "MongoDB"]
+  },
+  {
+    id: 2,
+    company: "Digital Innovations Ltd.",
+    position: "Full Stack Developer",
+    duration: "2020 - 2022",
+    location: "Bangalore, India",
+    description: "Developed and maintained multiple web applications using modern JavaScript frameworks and backend technologies. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+    achievements: [
+      "Built 3 major web applications serving 10,000+ users",
+      "Reduced bug reports by 50% through improved testing practices",
+      "Implemented responsive design improving mobile user experience",
+      "Contributed to open-source projects with 500+ GitHub stars"
+    ],
+    technologies: ["Angular", "ASP.NET Core", "SQL Server", "Azure", "Git", "jQuery"]
+  },
+  {
+    id: 3,
+    company: "StartupXYZ",
+    position: "Junior Developer",
+    duration: "2019 - 2020",
+    location: "Chennai, India",
+    description: "Started my professional journey as a junior developer, learning modern web development practices and contributing to various projects across the full stack.",
+    achievements: [
+      "Completed 15+ projects within deadlines",
+      "Learned 8+ new technologies in first year",
+      "Contributed to team's code review process",
+      "Maintained 95% code coverage in unit tests"
+    ],
+    technologies: ["JavaScript", "Python", "Django", "MySQL", "Bootstrap", "Git"]
+  }
+];
+
+export const resumeInfo = {
+  downloadUrl: "/resume/Raj_Kumar_M_Resume.pdf", // Place your resume file in public/resume/
+  lastUpdated: "December 2024"
+};

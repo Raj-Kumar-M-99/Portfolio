@@ -38,6 +38,12 @@ export const ThemeProvider = ({ children }) => {
       document.body.classList.add('theme-light');
       localStorage.setItem('theme', 'light');
     }
+    // Smooth background animation on theme switch
+    document.body.style.animation = 'none';
+    // Trigger reflow to restart animation when class changes
+    // eslint-disable-next-line no-unused-expressions
+    document.body.offsetHeight;
+    document.body.style.animation = 'bgPan 6s linear infinite';
   }, [isDarkMode]);
 
   const toggleTheme = () => {

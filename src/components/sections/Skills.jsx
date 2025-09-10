@@ -1,44 +1,73 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  SiReact, SiJavascript, SiTypescript, SiPython, SiNodedotjs, 
-  SiMongodb, SiGithub
-} from 'react-icons/si';
-import { Code, Server, Cloud, Database, Wrench, Cpu, Globe, Settings } from 'lucide-react';
+import { Code, Server, Cloud, Database, Wrench, Cpu } from 'lucide-react';
 import { skills } from '../../data/portfolioData';
 
-// Icon mapping for the skills - using fallbacks for unavailable icons
+// Import icons from cons folder with fallbacks
+import Flask from '../../icons/Flask';
+import BootStrap from '../../icons/BootStrap';
+import NET from '../../icons/NET';
+import Python from '../../icons/Python';
+import TypeScript from '../../icons/TypeScript';
+import CSharp from '../../icons/CSharp';
+import Aws from '../../icons/Aws';
+import JavaScript from '../../icons/JavaScript';
+import Reactjs from '../../icons/Reactjs';
+import ReactRedux from '../../icons/ReactRedux';
+import Tailwind from '../../icons/Tailwind';
+import Next from '../../icons/Next';
+import Angular from '../../icons/Angular';
+import JQuery from '../../icons/JQuery';
+import Node from '../../icons/Node';
+import Django from '../../icons/Django';
+import Express from '../../icons/Express';
+import Github from '../../icons/Github';
+import VsCode from '../../icons/vscode';
+import VisualStudio from '../../icons/VisualStudio';
+import Git from '../../icons/Git';
+import BitBucket from '../../icons/BitBucket';
+import Postman from '../../icons/Postman';
+import Docker from '../../icons/Docker';
+import SQLServer from '../../icons/SQLServer';
+import MongoDb from '../../icons/MongoDb';
+import MySQL from '../../icons/MySQL';
+import Algorithms from '../../icons/Algorithms';
+import { SiAmazonec2, SiAmazons3 } from 'react-icons/si';
+import { ImTree } from 'react-icons/im';
+
+// Clean icon mapping using cons folder icons with fallbacks
 const iconMap = {
-  SiReact: SiReact,
-  SiRedux: Settings,
-  SiNextdotjs: Globe,
-  SiAngular: Code,
-  SiJavascript: SiJavascript,
-  SiTypescript: SiTypescript,
-  SiBootstrap: Code,
-  SiTailwindcss: Code,
-  SiJquery: Code,
-  SiDotnet: Code,
-  SiNodedotjs: SiNodedotjs,
-  SiExpress: Server,
-  SiCsharp: Code,
-  SiPython: SiPython,
-  SiFlask: Server,
-  SiDjango: Server,
-  SiAmazonaws: Cloud,
-  SiAmazonec2: Cloud,
-  SiAmazons3: Cloud,
-  SiMongodb: SiMongodb,
-  SiMysql: Database,
-  SiMicrosoftsqlserver: Database,
-  SiGithub: SiGithub,
-  SiVisualstudiocode: Code,
-  SiVisualstudio: Code,
-  SiGit: SiGithub,
-  SiBitbucket: Code,
-  SiPostman: Wrench,
-  SiDocker: Settings,
-  SiAlgorithm: Cpu,
+  SiReact: Reactjs,
+  SiRedux: ReactRedux,
+  SiNextdotjs: Next,
+  SiAngular: Angular,
+  SiJavascript: JavaScript,
+  SiTypescript: TypeScript,
+  SiBootstrap: BootStrap,
+  SiTailwindcss: Tailwind,
+  SiJquery: JQuery,
+  SiDotnet: NET,
+  SiNodedotjs: Node,
+  SiExpress: Express,
+  SiCsharp: CSharp,
+  SiPython: Python,
+  SiFlask: Flask,
+  SiDjango: Django,
+  SiAmazonaws: Aws,
+  SiAmazonec2: SiAmazonec2,
+  SiAmazons3: SiAmazons3,
+  SiMongodb: MongoDb,
+  SiMysql: MySQL,
+  SiMicrosoftsqlserver: SQLServer,
+  SiGithub: Github,
+  SiVisualstudiocode: VsCode,
+  SiVisualstudio: VisualStudio,
+  SiGit: Git,
+  SiBitbucket: BitBucket,
+  SiPostman: Postman,
+  SiDocker: Docker,
+  SiAlgorithm: Algorithms,
+  SiDataStructures: ImTree
 };
 
 // Category icons
@@ -54,34 +83,6 @@ const categoryIcons = {
 const SkillCard = ({ skill, index }) => {
   const IconComponent = iconMap[skill.icon] || Cpu;
   
-  // Get icon class for brand colors
-  const getIconClass = (skillName) => {
-    const name = skillName.toLowerCase().replace(/[\s\.]/g, '');
-    if (name.includes('react')) return 'icon-react';
-    if (name.includes('javascript') || name.includes('js')) return 'icon-js';
-    if (name.includes('typescript')) return 'icon-ts';
-    if (name.includes('python')) return 'icon-python';
-    if (name.includes('node')) return 'icon-node';
-    if (name.includes('mongodb')) return 'icon-mongodb';
-    if (name.includes('github')) return 'icon-github';
-    if (name.includes('aws') || name.includes('ec2') || name.includes('s3')) return 'icon-aws';
-    if (name.includes('docker')) return 'icon-docker';
-    if (name.includes('git') && !name.includes('github')) return 'icon-git';
-    if (name.includes('angular')) return 'icon-angular';
-    if (name.includes('bootstrap')) return 'icon-bootstrap';
-    if (name.includes('tailwind')) return 'icon-tailwind';
-    if (name.includes('mysql')) return 'icon-mysql';
-    if (name.includes('flask')) return 'icon-flask';
-    if (name.includes('django')) return 'icon-django';
-    if (name.includes('express')) return 'icon-express';
-    if (name.includes('jquery')) return 'icon-jquery';
-    if (name.includes('postman')) return 'icon-postman';
-    if (name.includes('bitbucket')) return 'icon-bitbucket';
-    if (name.includes('net') || name.includes('c#')) return 'icon-dotnet';
-    if (name.includes('visual studio code')) return 'icon-vscode';
-    return '';
-  };
-  
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}
@@ -89,11 +90,11 @@ const SkillCard = ({ skill, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.1, y: -5 }}
-      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-white/30"
+      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl shadow-soft hover:shadow-glass transition-all duration-300 group border border-white/30 hover-lift"
     >
       <div className="flex flex-col items-center text-center">
-        <div className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg mb-3 group-hover:bg-white dark:group-hover:bg-gray-700 transition-all duration-300">
-          <IconComponent className={`w-8 h-8 transition-all duration-300 ${getIconClass(skill.name)}`} />
+        <div className="p-3 bg-gray-100/80 dark:bg-white/10 rounded-lg mb-3 group-hover:bg-white dark:group-hover:bg-gray-700 transition-all duration-300">
+          <IconComponent className="w-11 h-11 transition-all duration-300" />
         </div>
         <h3 className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-yellow-300 transition-colors duration-300">
           {skill.name}
@@ -112,7 +113,7 @@ const SkillCategory = ({ category, skillList, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
       viewport={{ once: true }}
-      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/30"
+      className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-soft border border-white/30"
     >
       <div className="flex items-center mb-6">
         <div className="p-3 bg-blue-100 dark:bg-blue-900/50 rounded-lg mr-4">
@@ -165,7 +166,7 @@ const Skills = () => {
             const CategoryIcon = categoryIcons[category] || Code;
             return (
               <div key={category} className="text-center">
-                <div className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/30 mb-2">
+                <div className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/30 mb-2 shadow-soft">
                   <CategoryIcon className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">
                     {skillList.length}
@@ -197,7 +198,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 text-center bg-white/90 dark:bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/30"
+          className="mt-16 text-center bg-white/90 dark:bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/30 shadow-soft"
         >
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Always Learning

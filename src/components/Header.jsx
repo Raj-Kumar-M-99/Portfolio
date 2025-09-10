@@ -12,6 +12,7 @@ const Header = () => {
   const navigationItems = [
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
@@ -56,7 +57,7 @@ const Header = () => {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/10 dark:bg-black/30 backdrop-blur-md shadow-lg border-b border-white/20 dark:border-white/10'
+          ? 'bg-white/10 dark:bg-black/50 backdrop-blur-md shadow-soft border-b border-white/20 dark:border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -85,14 +86,14 @@ const Header = () => {
                 className={`relative px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none ${
                   activeSection === item.href.substring(1)
                     ? 'text-yellow-300'
-                    : 'text-white/80 hover:text-white'
+                    : 'text-white/90 hover:text-white'
                 }`}
               >
                 {item.name}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-yellow-300"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-400 to-accent-400"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
@@ -108,7 +109,7 @@ const Header = () => {
               onClick={toggleTheme}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="p-2 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/50 shadow-soft"
               aria-label="Toggle theme"
             >
               <AnimatePresence mode="wait">
