@@ -156,5 +156,5 @@ export const experiences = [
 
 export const resumeInfo = {
   downloadUrl: "/resume/Raj_Kumar_M_Resume.pdf", // Place your resume file in public/resume/
-  lastUpdated: "December 2024"
+  lastUpdated: "September 2025"
 };

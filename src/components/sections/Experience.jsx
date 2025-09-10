@@ -107,7 +107,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="section-padding bg-gray-50/50 dark:bg-black/20 backdrop-blur-sm transition-colors duration-300">
+    <section id="experience" className="section-padding bg-blue-900/20 dark:bg-black/20 backdrop-blur-sm transition-colors duration-300">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -116,11 +116,13 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-100 dark:text-white mb-4">
             Professional Experience
           </h2>
+          <div className="w-24 h-1 bg-white mx-auto rounded-full shadow-lg"></div>
+
           <div className="w-24 h-1 bg-gradient-to-r from-brand-600 to-accent-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-slate-100 dark:text-gray-400 max-w-2xl mx-auto mb-8">
             My journey in software development, from junior developer to senior roles, 
             building impactful solutions and leading teams.
           </p>
@@ -135,7 +137,7 @@ const Experience = () => {
             <Download className="w-5 h-5" />
             <span>Download Resume</span>
           </motion.button>
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          <p className="text-sm text-slate-200 dark:text-gray-400 mt-2">
             Last updated: {resumeInfo.lastUpdated}
           </p>
         </motion.div>
@@ -175,7 +177,7 @@ const Experience = () => {
               onClick={handleResumeDownload}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-secondary inline-flex items-center px-8 py-3"
+              className="btn-primary inline-flex items-center px-8 py-3"
             >
               <Download className="w-4 h-4 mr-2" />
               Download Resume

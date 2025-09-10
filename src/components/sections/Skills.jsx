@@ -154,32 +154,6 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        {/* Skills Overview Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {Object.entries(skills).slice(0, 4).map(([category, skillList], index) => {
-            const CategoryIcon = categoryIcons[category] || Code;
-            return (
-              <div key={category} className="text-center">
-                <div className="bg-white/90 dark:bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/30 mb-2 shadow-soft">
-                  <CategoryIcon className="w-8 h-8 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {skillList.length}
-                  </div>
-                </div>
-                <p className="text-sm text-gray-800 dark:text-white font-medium">
-                  {category.split(' ')[0]}
-                </p>
-              </div>
-            );
-          })}
-        </motion.div>
-
         {/* Skills Categories */}
         <div className="space-y-8">
           {Object.entries(skills).map(([category, skillList], index) => (

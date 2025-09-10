@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, MapPin, Send, ExternalLink } from 'lucide-react';
+import { Mail, Linkedin, MapPin, Send, ExternalLink } from 'lucide-react';
 import { personalInfo } from '../../data/portfolioData';
 
 const ContactInfo = ({ icon: Icon, title, value, link, index }) => (
@@ -69,12 +69,6 @@ const Contact = () => {
       title: 'Email',
       value: personalInfo.email,
       link: `mailto:${personalInfo.email}`
-    },
-    {
-      icon: Phone,
-      title: 'Phone',
-      value: personalInfo.phone,
-      link: `tel:${personalInfo.phone}`
     },
     {
       icon: Linkedin,

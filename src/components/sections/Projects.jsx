@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Folder, ArrowRight } from 'lucide-react';
 import { projects } from '../../data/portfolioData';
@@ -93,7 +92,7 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="section-padding bg-gray-50/50 dark:bg-black/20 backdrop-blur-sm transition-colors duration-300">
+    <section id="projects" className="section-padding bg-blue-900/30 dark:bg-black/20 backdrop-blur-sm transition-colors duration-300">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,11 +101,13 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-100 dark:text-white mb-4">
             Featured Projects
           </h2>
+          <div className="w-24 h-1 bg-white mx-auto rounded-full shadow-lg"></div>
+
           <div className="w-24 h-1 bg-gradient-to-r from-brand-600 to-accent-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-100 dark:text-gray-400 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills in web development, 
             problem-solving, and creating user-friendly applications.
           </p>
@@ -127,7 +128,7 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-gray-600 dark:text-gray-400 mb-6">
+          <p className="text-slate-200 dark:text-gray-400 mb-6">
             Want to see more of my work?
           </p>
           <motion.a
